@@ -8,7 +8,7 @@ Demonstrations of our mmWave human activity recognition system are available on 
 Human Activity Recognition (HAR) using millimeter-wave radar provides a privacy-preserving alternative to camera-based methods. However, existing radar-based approaches often rely on 2D heatmaps or voxelized representations, leading to high computational costs. Additionally, Transformer models commonly used to capture temporal relationships in sequential data usually demand significant training and inference resources. This paper introduces a Transformer-based framework for HAR using motion waveforms derived from radar point clouds. The approach includes key components such as data attribute selection, geometric clustering, and motion waveform generation to emphasize active body segments (e.g., limb movements). Experimental results demonstrate that our method achieves competitive accuracy on the MMActivity dataset compared to previous methods while maintaining real-time efficiency. Furthermore, we collected our own radar-based HAR dataset to validate the robustness of our approach.
 
 <p align="center">
-  <img src="Image/System_Overview.jpg" alt="System Overview" style="width:600px; height:auto;"/>
+  <img src="Images/System_Overview.jpg" alt="System Overview" style="width:600px; height:auto;"/>
 </p>
 
 ## Dataset
@@ -51,5 +51,5 @@ During training, the model checkpoints and log files will be saved to a dedicate
 ### Testing a Trained Model
 To evaluate a trained model, use the following command:
 ```
-python main.py train <path_to_mmwave_data.csv> --checkpoint_path <path_to_your_model_checkpoint>
+python main.py test <path_to_mmwave_data.csv> --checkpoint_path <path_to_your_model_checkpoint>
 ```
